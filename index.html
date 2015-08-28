@@ -19,8 +19,8 @@
 <body ng-Controller="MainCtrl">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3" ng-Controller="PlayerCtrl" ng-view>
-				<h1> FANTASY FOOTBALL OUTLOOK </h1>		
+			<div class="col-md-8 col-md-offset-2" ng-Controller="PlayerCtrl" ng-view>
+				<h1 class="text-center"> FANTASY FOOTBALL OUTLOOK </h1>		
 				<hr>			
 				<h3 class="text-center">Search Player Outlooks</h3>
 				<form ng-submit="searchPlayer()" class="form-inline text-center">
@@ -30,22 +30,22 @@
 				  <input type="submit" value="Search" class="btn btn-primary">
 				</form>
 				<hr>
+				<div ng-show="players.length > 0">
+					<h4 class="text-center"> Name: {{player.body.players[0].fullname}} </h4>
+					<h4 class="text-center"> Team: {{player.body.players[0].pro_team}} </h4>
+					<h4 class="text-center"> Position: {{player.body.players[0].position}} </h4>
+					<ul>
+						<li class="thumbnails">
+							<img ng-src="{{player.body.players[0].photo}}" />
+						</li>
+					</ul>
 				
-				<h4 class="text-center"> {{player.body.players[0].fullname}} </h4>
-				<br>
-				<ul>
-					<li class="thumbnails">
-						<img ng-src="{{player.body.players[0].photo}}" />
-					</li>
-				</ul>
-
 				<hr>
-				
-
-				
+				<div id="outlookCont">
 				<h4 class="text-center"> Fantasy Outlook </h4>
 				<p class='text-justify'> {{outlook.body.player_outlook.player.outlook_data.outlook}} </p>
-			
+				</div>
+				</div>
 			</div>
 			</div>	
 		
