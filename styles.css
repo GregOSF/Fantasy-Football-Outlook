@@ -1,0 +1,25 @@
+.thumbnails {
+    text-align:center;
+}
+
+.thumbnails > li {
+    display: inline-block;
+    display:inline;  ie7 fix 
+    float: none; /* this is the part that makes it work */
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+	background: url('http://rack.2.mshcdn.com/media/ZgkyMDEzLzEyLzE0L2QwL0JhbWFGb290YmFsLjQ1ZDFkLmpwZwpwCXRodW1iCTg1MHg4NTA-CmUJanBn/bcb9c021/181/BamaFootballGettyYear.jpg');
+	background-size: cover;
+	padding-top: 50px;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+
+	
+}
