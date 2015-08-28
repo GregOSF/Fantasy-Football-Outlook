@@ -22,7 +22,8 @@ angular.module('sportsApp', [])
       			  	  	console.log(response)
       			  	  	$scope.outlook=response.data
       			  		})
-
+      			  	$scope.players.push(playerId)
+      			  	console.log($scope.players.length)
       				})
 			        
 			    }
