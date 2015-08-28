@@ -1,5 +1,6 @@
 .thumbnails {
     text-align:center;
+
 }
 
 .thumbnails > li {
@@ -20,6 +21,18 @@ body {
 	background-attachment: fixed;
 	font-family: 'Permanent Marker', cursive;
 	color: white;
+	font-size: 60px;
+}
 
-	
+#outlookCont {
+	font-size: 15px;
+	/*border: 5px groove;*/
+	border-color: blue;
+	/*border-radius: 5px;*/
+	padding: 10px 10px 10px 10px;
+	margin: auto;
+	/*box-shadow: 10px 10px 5px #888888;
+*/	background-color: rgba(255,255,255,0.5);
+	color: black;
+
 }
