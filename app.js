@@ -19,11 +19,15 @@ angular.module('sportsApp', [])
       			  	var playerId = response.data.body.players[0].id
       			  	$http.jsonp('http://api.cbssports.com/fantasy/players/outlook?version=3.0&SPORT=football&player_id=' + playerId + '&response_format=JSON&callback=JSON_CALLBACK')
       			  	  .then(function(response) {
-      			  	  	console.log(response)
+      			  	  	var outlookText = response.data.body.player_outlook.player.outlook_data.outlook
+      			  	  	console.log(outlookText)
       			  	  	$scope.outlook=response.data
+      			  	  	outlookText.replace(/playerlink/i, '')
+
       			  		})
       			  	$scope.players.push(playerId)
       			  	console.log($scope.players.length)
+
       				})
 			        
 			    }
